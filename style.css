@@ -1,0 +1,179 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #2E004F 0%, #080010 50%, #6A0DAD 100%);
+    background-size: 400% 400%;
+    animation: gradientAnimation 30s ease infinite alternate;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    gap: 6px;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.card {
+    background-color: rgba(26, 26, 46, 0.75);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    width: 100%;
+    padding: 2.5rem;
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+.currency-button {
+    background-color: #2a2a4a;
+    color: #a0a0c0;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    min-width: 80px;
+}
+.currency-button svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+#btn-btc:hover:not(.active) { background-color: #FFA500; color: #fff; box-shadow: 0 0 8px rgba(255, 165, 0, 0.4); }
+#btn-eth:hover:not(.active) { background-color: #1E90FF; color: #fff; box-shadow: 0 0 8px rgba(30, 144, 255, 0.4); }
+#btn-sol:hover:not(.active) { background-color: #7CFC00; color: #fff; box-shadow: 0 0 8px rgba(124, 252, 0, 0.4); }
+#btn-ada:hover:not(.active) { background-color: #40E0D0; color: #fff; box-shadow: 0 0 8px rgba(64, 224, 208, 0.4); }
+
+#btn-btc.active { background-color: #FF8C00; color: #ffffff; box-shadow: 0 0 12px rgba(255, 140, 0, 0.6); border-color: #FFD700; }
+#btn-eth.active { background-color: #00BFFF; color: #ffffff; box-shadow: 0 0 12px rgba(0, 191, 255, 0.6); border-color: #87CEEB; }
+#btn-sol.active { background-color: #39FF14; color: #ffffff; box-shadow: 0 0 12px rgba(57, 255, 20, 0.6); border-color: #7CFC00; }
+#btn-ada.active { background-color: #00FFFF; color: #ffffff; box-shadow: 0 0 12px rgba(0, 255, 255, 0.6); border-color: #00CED1; }
+
+input[type="number"] {
+    background-color: #2a2a4a;
+    border: 1px solid #4a4a6a;
+    color: #e0e0e0;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.2s ease-in-out;
+    padding-left: 4rem;
+}
+input[type="number"]:focus {
+    outline: none;
+    border-color: #8a2be2;
+    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.3);
+}
+.input-prefix {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0a0c0;
+    font-weight: 600;
+    pointer-events: none;
+}
+.input-wrapper {
+    transition: transform 0.2s ease-in-out;
+}
+.input-wrapper:hover {
+    transform: scale(1.02);
+}
+.swap-button {
+    background: linear-gradient(45deg, #6a0dad, #8a2be2);
+    color: #e0e0e0;
+    border-radius: 9999px;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+.swap-button:hover {
+    transform: rotate(90deg);
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.6);
+}
+.message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2a2a4a;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 300px;
+    text-align: center;
+}
+.message-box button {
+    background-color: #6a0dad;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.message-box button:hover {
+    background-color: #8a2be2;
+}
+.title-with-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+.crypto-logo-img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+    border-radius: 50%;
+}
+
+.crypto-display-btc { color: #FF8C00; }
+.crypto-display-eth { color: #00BFFF; }
+.crypto-display-sol { color: #39FF14; }
+.crypto-display-ada { color: #00FFFF; }
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: #a0a0c0;
+    font-size: 0.875rem;
+    position: relative;
+    z-index: 1;
+}
+footer a {
+    color: #8a2be2;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+footer a:hover {
+    color: #be90ed;
+}
