@@ -1,0 +1,29 @@
+name: CI para TDE-ES1-CEST
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Instalar Node.js (necessário para htmlhint)
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Instalar htmlhint globalmente
+        run: npm install -g htmlhint
+
+      - name: Validar arquivos HTML
+        run: htmlhint '**/*.html'
+
+      - name: Listar arquivos (verificação simples)
+        run: ls -la
