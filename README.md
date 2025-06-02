@@ -22,14 +22,6 @@ Este é um projeto simples de um conversor de criptomoedas chamado **Real Cripto
 
 ---
 
-## Funcionalidades
-
-* Aplicação web básica de conversão de criptomoedas para real brasileiro e vice-versa.
-* **CI** (Integração Contínua) configurado com **GitHub Actions**
-* Validação de código
-
----
-
 ## Tecnologias Usadas
 
 * <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="20"/> HTML5  
