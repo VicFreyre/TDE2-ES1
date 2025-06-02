@@ -11,14 +11,14 @@ Este é um projeto simples de um conversor de criptomoedas chamado **Real Cripto
 ## Estrutura do Projeto
 
     TDE-ES1-CEST/
-    │
+    └── .github/
+    │  └── workflows/
+    │        └── ci.yml
     ├── index.html
     ├── style.css
     ├── script.js
     ├── README.md
-    └── .github/
-        └── workflows/
-            └── ci.yml
+   
 
 ---
 
