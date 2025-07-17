@@ -34,7 +34,7 @@ Este é um projeto simples de um conversor de criptomoedas chamado **Real Cripto
 
 👇 Acesse o deploy do projeto diretamente pelo GitHub Pages 
 
-🔗 [https://vicfreyre.github.io/TDE-ES1-CEST/](https://vicfreyre.github.io/TDE-ES1-CEST/)
+🔗 https://vicfreyre.github.io/TDE2-ES1/
 
 ---
 
